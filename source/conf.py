@@ -14,7 +14,7 @@ release = '0.1'
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
-extensions = ["myst_parser"]
+extensions = ["myst_parser", "sphinx_multiversion"]
 
 templates_path = ['_templates']
 exclude_patterns = []
@@ -31,4 +31,10 @@ source_suffix = {
     '.rst': 'restructuredtext',
     '.txt': 'markdown',
     '.md': 'markdown',
+}
+
+html_sidebars = {
+    '**': [
+        'versioning.html',
+    ],
 }
