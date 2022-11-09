@@ -35,7 +35,7 @@ source_suffix = {
 
 html_sidebars = {
     '**': [
-        'versioning.html',
+        'versions.html',
     ],
 }
 
