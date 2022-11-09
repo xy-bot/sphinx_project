@@ -4,5 +4,5 @@ resources
 .. toctree::
    :caption: resources title:
 
-   类与对象
-   元编程
+   迭代器
+   数据结构与算法
