@@ -39,4 +39,4 @@ html_sidebars = {
     ],
 }
 
-smv_latest_version = 'main'
+smv_latest_version = 'develop'
