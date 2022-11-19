@@ -40,4 +40,4 @@ html_sidebars = {
 }
 
 # 指定哪个分支为 lastest 版本
-smv_latest_version = 'develop'
+smv_latest_version = 'master'
