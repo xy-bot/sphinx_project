@@ -2,7 +2,7 @@ resources
 ================================
 
 .. toctree::
-   :caption: resources title:
+   :hidden:
 
    类与对象
    元编程
