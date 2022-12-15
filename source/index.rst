@@ -1,4 +1,4 @@
-Welcome to test's documentation!
+Welcome to index's documentation!
 ================================
 
 resource_content1

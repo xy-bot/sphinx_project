@@ -11,6 +11,8 @@ copyright = "2022, test"
 author = "test"
 release = "0.1"
 
+# version = ""
+
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
@@ -42,8 +44,16 @@ html_sidebars = {
 html_theme_options = {
     "collapse_navigation": False,
     "navigation_depth": 4,
+    "logo_only": True,
+    "logo_url": "www.baidu.com",
 }
 # 指定哪个分支为 lastest 版本
 smv_latest_version = "master"
 
 html_show_sourcelink = False
+
+# master_doc = "welcome"
+
+html_logo = "logo.png"
+
+# logo_url = "www.baidu.com"
