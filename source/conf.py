@@ -26,7 +26,18 @@ language = "zh"
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
-html_theme = "sphinx_rtd_theme"
+# custom theme
+import sys
+import os
+sys.path.insert(0, os.path.abspath('./_themes'))
+
+import myTheme
+
+html_theme = "myTheme"
+
+html_theme_path = myTheme.get_html_theme_path()
+
+# html_theme = "sphinx_rtd_theme"
 html_static_path = ["_static"]
 
 source_suffix = {
@@ -52,7 +63,7 @@ smv_latest_version = "master"
 
 html_show_sourcelink = False
 
-# master_doc = "welcome"
+master_doc = "index"
 
 html_logo = "logo.png"
 
