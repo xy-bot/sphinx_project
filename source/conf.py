@@ -39,4 +39,15 @@ html_sidebars = {
     ],
 }
 
+smv_tag_whitelist = r'^(1.4-lw)'
+
+# Whitelist pattern for branches (set to None to ignore all branches)
+smv_branch_whitelist = r'^.*$'
+
+# Whitelist pattern for remotes (set to None to use local branches only)
+smv_remote_whitelist = None
+
+# Pattern for released versions
+smv_released_pattern = r'^tags/.*$'
+
 smv_latest_version = 'develop'
