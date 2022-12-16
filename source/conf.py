@@ -27,17 +27,17 @@ language = "zh"
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
 # custom theme
-import sys
-import os
-sys.path.insert(0, os.path.abspath('./_themes'))
+# import sys
+# import os
+# sys.path.insert(0, os.path.abspath('./_themes'))
 
-import myTheme
+# import myTheme
 
-html_theme = "myTheme"
+# html_theme = "myTheme"
 
-html_theme_path = myTheme.get_html_theme_path()
+# html_theme_path = myTheme.get_html_theme_path()
 
-# html_theme = "sphinx_rtd_theme"
+html_theme = "sphinx_rtd_theme"
 html_static_path = ["_static"]
 
 source_suffix = {
