@@ -58,8 +58,21 @@ html_theme_options = {
     "logo_only": True,
     "logo_url": "www.baidu.com",
 }
+
+# Whitelist pattern for tags (set to None to ignore all tags)
+# smv_tag_whitelist = r'^.*$'
+
+# Whitelist pattern for branches (set to None to ignore all branches)
+smv_branch_whitelist = r'^(develop|main)$'
+
+# Whitelist pattern for remotes (set to None to use local branches only)
+smv_remote_whitelist = r'^(develop|main)$'
+
+# Pattern for released versions
+smv_released_pattern = r'^(heads|remotes/[^/]+)/(?!:master).*$'
+
 # 指定哪个分支为 lastest 版本
-smv_latest_version = "master"
+smv_latest_version = "develop"
 
 html_show_sourcelink = False
 
