@@ -8,10 +8,11 @@ pip install sphinx-multiversion
 ```
 # 使用方式
 ## 前提
-需要已经安装sphinx，未安装的话可以执行如下命令进行安装
+1. 需要已经安装sphinx，未安装的话可以执行如下命令进行安装
 ```bash
 pip install sphinx
 ```
+2. 必须基于git仓库
 ## 操作步骤
 1. 设置sphinx扩展
 ```python
