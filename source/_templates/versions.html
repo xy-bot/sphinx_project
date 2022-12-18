@@ -6,7 +6,8 @@
     <span class="fa fa-caret-down"></span>
   </span>
   <div class="rst-other-versions">
-   
+    {{ current_version.name }}
+    {{latest_version.name}}
     {% if versions.releases %}
     <!-- 显示 -->
     <dt>{{ _('Releases') }}</dt>
@@ -14,18 +15,18 @@
       {%- for item in versions.releases %}
       <dd><a href="{{ item.url }}">{{ item.name }}</a></dd>
       {%- endfor %}
-    </ul>
-    {% endif %}
-    {% if versions.in_development %}
-    <dt>{{ _('In Development') }}</dt>
-    <dl>
-      {%- for item in versions.in_development %}
-      <dd><a href="{{ item.url }}">{{ item.name }}</a></dd>
-      {%- endfor %}
-    </ul>
-    
-    {% endif %}
-  
+      </ul>
+      {% endif %}
+      {% if versions.in_development %}
+      <dt>{{ _('In Development') }}</dt>
+      <dl>
+        {%- for item in versions.in_development %}
+        <dd><a href="{{ item.url }}">{{ item.name }}</a></dd>
+        {%- endfor %}
+        </ul>
+
+        {% endif %}
+
   </div>
 </div>
 {%- endif %}

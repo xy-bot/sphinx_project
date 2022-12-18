@@ -6,26 +6,32 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = "test"
-copyright = "2022, test"
-author = "test"
-release = "0.1"
 
-version = "0.1"
+project = "wwww"
+copyright = "2022, wwww"
+author = "www"
+extensions = ["myst_parser", "sphinx_multiversion"]
+html_theme = "sphinx_rtd_theme"
+language = "zh"
+
+
+# release = "0.2"
+# version = "1.0"
+
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
-extensions = ["myst_parser", "sphinx_multiversion"]
 
 
-exclude_patterns = ["sphinx-multiversion.md"]
 
-language = "zh"
+# exclude_patterns = ["sphinx-multiversion.md"]
+
+
 
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
-html_theme = "sphinx_rtd_theme"
+
 html_static_path = ["_static"]
 
 source_suffix = {
@@ -54,8 +60,6 @@ smv_testing_whitelist = r"refs/tags/1.4"
 
 # Pattern for released versions
 smv_released_pattern = r"refs/tags/1.4"
-
-smv_current_version = "develop"
 
 smv_latest_version = "1.4"
 

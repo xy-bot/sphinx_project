@@ -146,18 +146,22 @@ options:
 
 ## 常见配置及含义
 ```python
-# 多版本需要拉取和展示的tag，可通过git tag查看所有tag
+# 多版本需要拉取和展示的tag，可通过git tag查看所有tag,默认为全部.*?
 smv_tag_whitelist = r'1.4'
-# 多版本需要拉取和展示的branch，可通过git branch查看所有分支
+# 多版本需要拉取和展示的branch，可通过git branch查看所有分支,默认为全部.*?
 smv_branch_whitelist = r"develop"
-# 多版本需要拉取和展示的remote，可通过git remote查看所有分支
+# 多版本需要拉取和展示的remote，可通过git remote查看所有remote，正常来说只有一个remote，所以此项设置为None即可。默认为None
 smv_remote_whitelist = None
 # 多版本存在Release时需要展示在Release一栏的tag、branch等
 smv_released_pattern = r'refs/tags/*'  
-# 设置多版本的最新版本
+# 设置多版本的最新版本，可以在versions.html设置latest_version.name获取，用于判断是否是最新的版本从而做相应处理
 smv_latest_version = '1.4'
 # 默认生成的html的文件夹名称，默认以分支或tag名命名
 smv_outputdir_format = r"{ref.name}"
+
+# 无效的设置
+# 设置当前分支，可以在versions.html设置current_version.name获取，但是默认多版本自动取分支或tag名，所以设置也是无效的
+smv_current_version = ""
 ```
 ```python
 # 指定相关元属性配置，可直接根据元属性进行文档生成
@@ -206,7 +210,31 @@ metadata[gitref.name] = {
 - .git: 多版本所需的git环境，即需要拉取的branch、tag所在的环境。
 - source: 源文件路径，一般为conf.py所在路径
 - _templates: 存放多版本所需的模板文件
-- conf.py: 配置文件,sphinx的conf.py，需包含`sphinx-multiversion`配置，详细可见上述配置和含义
+- conf.py: 配置文件,sphinx的conf.py，需包含`sphinx-multiversion`配置，详细可见上述配置和含义,目前发现除了`sphinx-multiversion`配置,如下配置会影响整个html文档的生成效果，必须要设置如下配置,conf中必须包含的配置如下:
+```python
+# 项目主题及整体文档的版本、插件等信息
+project = "wwww"
+copyright = "2022, wwww"
+author = "www"
+extensions = ["myst_parser", "sphinx_multiversion"]
+html_theme = "sphinx_rtd_theme"
+language = "zh"
+
+# sphinx-multiversion配置
+html_sidebars = {
+    "**": [
+        "versions.html",
+    ],
+}
+templates_path = ["_templates"]
+smv_tag_whitelist = r"1.4"
+smv_branch_whitelist = r"develop"
+smv_remote_whitelist = None
+smv_testing_whitelist = r"refs/tags/1.4"
+smv_released_pattern = r"refs/tags/1.4"
+smv_current_version = "develop"
+smv_latest_version = "1.4"
+```
 - versions.html: 多版本模板文件
 ```html
 {%- if current_version %}
