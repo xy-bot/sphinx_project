@@ -61,6 +61,11 @@ smv_testing_whitelist = r"refs/tags/1.4"
 # Pattern for released versions
 smv_released_pattern = r"refs/tags/1.4"
 
+<<<<<<< HEAD
+=======
+smv_current_version = "develop2"
+
+>>>>>>> 805431ca14a9d2bc09e0143c223fb58162728b76
 smv_latest_version = "1.4"
 
 # smv_metadata = {
