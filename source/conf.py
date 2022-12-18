@@ -17,7 +17,7 @@ version = "0.1"
 
 extensions = ["myst_parser", "sphinx_multiversion"]
 
-templates_path = ["_templates"]
+
 exclude_patterns = ["sphinx-multiversion.md"]
 
 language = "zh"
@@ -39,6 +39,8 @@ html_sidebars = {
         "versions.html",
     ],
 }
+
+templates_path = ["_templates"]
 
 smv_tag_whitelist = r"1.4"
 
