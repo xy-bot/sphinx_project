@@ -55,7 +55,7 @@ smv_testing_whitelist = r"refs/tags/1.4"
 # Pattern for released versions
 smv_released_pattern = r"refs/tags/1.4"
 
-smv_current_version = "develop"
+smv_current_version = "develop2"
 
 smv_latest_version = "1.4"
 
